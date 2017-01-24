@@ -5,7 +5,8 @@ import numpy as np
 import sys
 
 def bubblesort(some_list):
-    assert len(some_list) > 0, 'Cannot sort empty list'
+    if len(some_list) == 0:
+        return([])
     iteration = 1
     while iteration < len(some_list):
         for i in range(len(some_list)-iteration):
@@ -18,6 +19,9 @@ def bubblesort(some_list):
 
 
 def quicksort(some_list):
+
+    if len(some_list) == 0:
+        return([])
 
     lesser = []
     equal = []
