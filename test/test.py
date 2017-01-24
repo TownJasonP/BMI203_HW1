@@ -11,11 +11,11 @@ def test_bubblesort():
 
     # for now, just attempt to call the bubblesort function, should
     # actually check output
-    assert bubblesort(x) == [0,1,1,2,4]
+    np.testing.assert_equal(bubblesort(x),[0,1,1,2,4])
 
 def test_quicksort():
 
     x = np.array([1,2,4,0,1])
     # for now, just attempt to call the quicksort function, should
     # actually check output
-    assert quicksort(x) == [0,1,1,2,4]
+    np.testing.assert_equal(quicksort(x),[0,1,1,2,4])
