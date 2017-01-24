@@ -13,9 +13,22 @@ def test_bubblesort():
     # actually check output
     np.testing.assert_equal(bubblesort(x),[0,1,1,2,4])
 
+    x = np.array([0])
+
+    # for now, just attempt to call the bubblesort function, should
+    # actually check output
+    np.testing.assert_equal(bubblesort(x),[0])
+
+
 def test_quicksort():
 
     x = np.array([1,2,4,0,1])
     # for now, just attempt to call the quicksort function, should
     # actually check output
     np.testing.assert_equal(quicksort(x),[0,1,1,2,4])
+
+    x = np.array([0])
+
+    # for now, just attempt to call the bubblesort function, should
+    # actually check output
+    np.testing.assert_equal(quicksort(x),[0])
