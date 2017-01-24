@@ -1,5 +1,5 @@
 import numpy as np
-from example import algs
+from sorting_assignment import bubblesort, quicksort
 
 def test_pointless_sort():
     # generate random vector of length 10
