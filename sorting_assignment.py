@@ -32,7 +32,7 @@ def quicksort(some_list):
                 equal.append(i)
             if i > pivot:
                 greater.append(i)
-        return(quick_sort(lesser)+equal+quick_sort(greater))
+        return(quicksort(lesser)+equal+quicksort(greater))
     else:
         return(some_list)
 
@@ -56,8 +56,11 @@ def plot_function_runtime(function):
             times.append(run_time)
 
     plt.figure(facecolor = 'white')
-    plt.title(str(function))
+    plt.title(function.__name__)
     plt.scatter(sizes, times, marker = '.', alpha = 0.1)
     plt.ylabel('Run Time (s)')
     plt.xlabel('Random List Size')
     plt.show()
+
+plot_function_runtime(quicksort)
+plot_function_runtime(bubblesort)
