@@ -16,6 +16,9 @@ def test_bubblesort():
     #Check to make sure it can handle 0 element lists
     x = []
     np.testing.assert_equal(bubblesort(x),[])
+    #Test how it handles letters
+    x = ['a', 'c', 'b']
+    np.testing.assert_equal(bubblesort(x),['a', 'b', 'c'])
 
 def test_quicksort():
 
@@ -24,8 +27,14 @@ def test_quicksort():
     # actually check output
     np.testing.assert_equal(quicksort(x),[0,1,1,2,4])
 
+    # Check for 1 element lists
     x = np.array([0])
-
-    # for now, just attempt to call the bubblesort function, should
-    # actually check output
     np.testing.assert_equal(quicksort(x),[0])
+
+    #Check to make sure it can handle 0 element lists
+    x = []
+    np.testing.assert_equal(bubblesort(x),[])
+    
+    #Test how it handles letters
+    x = ['a', 'c', 'b']
+    np.testing.assert_equal(bubblesort(x),['a', 'b', 'c'])
